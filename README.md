@@ -1,5 +1,5 @@
 
-This is a version of the workflow provided by Nanopore epi2me labs at https://github.com/epi2me-labs/wf-single-cell designed specifically to work easily on Biowulf with long read input data. If you have any problems running it, consult either with Datatecnica or Biowulf.
+This is a version of the workflow provided by Nanopore epi2me labs at https://github.com/epi2me-labs/wf-single-cell designed specifically to work easily on Biowulf with long read input data. If you have any problems running it, consult either with Datatecnica or Biowulf. More specific information on the use and output of this workflow can be found at the [epi2me-labs github](https://github.com/epi2me-labs/wf-single-cell).
 
 ## BEFORE RUNNING
 
@@ -13,7 +13,7 @@ This is a version of the workflow provided by Nanopore epi2me labs at https://gi
 <a id="1"></a>
 #### Pull or copy the files from this repo.
 
-Choose a good location on Biowulf to run this workflow. Make sure there are plenty of GB of space. You can check on the Biowulf Dashboard at hpc.nih.gov. You will need a copy of this repo for each file you wish to process. Each much be placed in a separate folder.
+Choose a good location on Biowulf to run this workflow. Make sure there are plenty of GB of space. You can check on the Biowulf Dashboard at hpc.nih.gov. You will need a copy of this repo for each file you wish to process. Each much be placed in a separate folder. It is also acceptable to copy the nextflow.config file and runscript.sh file separately in each new folder.
 
 ```
 git clone this_repo
