@@ -16,7 +16,7 @@ This is a version of the workflow provided by Nanopore epi2me labs at https://gi
 Choose a good location on Biowulf to run this workflow. Make sure there are plenty of GB of space. You can check on the Biowulf Dashboard at hpc.nih.gov. You will need a copy of this repo for each file you wish to process. Each much be placed in a separate folder. It is also acceptable to copy the nextflow.config file and runscript.sh file separately in each new folder.
 
 ```
-git clone this_repo
+git clone git@github.com:NIH-CARD/wf_single_cell_longread.git
 ```
 
 <a id="2"></a>
@@ -39,11 +39,15 @@ Or, you can create a symlink:
 ln -s /data/path/of/your/fastq/file.fastq.gz ./
 ```
 
+Then cd back out:
+```
+cd ../
+```
+
 <a id="3"></a>
 #### Edit the runscript.sh
-mkdir symlinks
-The answers to amny questions related to this not answered here can be found at https://github.com/epi2me-labs/wf-single-cell.
-- First, set the fastq directory. Set it to /data/firectory/containing/.fastq.gz/file/
+The answers to any questions related to this not answered here can be found at https://github.com/epi2me-labs/wf-single-cell.
+- First, set the fastq directory (--fastq). Set it to /data/firectory/containing/.fastq.gz/file/
 - In general, it is best to not use a sample_sheet unless you already have one written.
 - Instead of a sample sheet, use the `--kit_name`, `--kit_version`, `--expected_cells`, etc which are already in the runscript in this repo. 
 - Be sure to set the ref_genome_dir appropriately given the kit that was used. If the one indicated in this version of the sample_sheet is not appropriate, the appropriate one can likely be found in the cellranger files corresponding to the kit used for this experiment.
@@ -56,8 +60,9 @@ If you choose to use the symlink method, you must edit singularity.runOptions in
 <a id="5"></a>
 #### Run the script
 
-Cd back to the directory with the runscript.sh
+Cd back to the directory with the runscript.sh if you are not there.
 
+To run the workflow:
 ```
 sbatch runscript.sh
 ```
